@@ -10,10 +10,15 @@ ground, and the 6502's SYNC and RDY signal paths.
 
 The controller has two push buttons.
 
-1. Run/Stop -- is used to toggle between the free running and single-step
-   modes. In the free running mode, the green status LED is illuminate
-2. Step -- is used to advance the processor by a single instruction. While
-   stopped, the red status LED is illuminated.
+1. **Run/Stop** -- is used to toggle between the free running and 
+   single-step modes. In the free running mode, the green status LED is 
+   illuminated.
+2. **Step** -- is used to advance the processor by a single instruction when
+   the CPU is stopped. While the CPU is stopped, the red status LED is 
+   illuminated.
 
+The buttons are debounced via the 555 and 74123 ICs to avoid triggering
+multiple step pulses.
 
-
+The circuit is designed with a diode such that it can be connected to the 
+6502's RDY input without disrupting other uses of the signal.
