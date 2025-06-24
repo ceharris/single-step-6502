@@ -22,3 +22,6 @@ multiple step pulses.
 
 The circuit is designed with a diode such that it can be connected to the 
 6502's RDY input without disrupting other uses of the signal.
+
+See [single-step-6502.pdf](single-step-6502.pdf) for a full description
+of the circuit design.
